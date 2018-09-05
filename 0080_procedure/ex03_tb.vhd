@@ -6,9 +6,9 @@ end entity;
 
 architecture behav of ex03_tb is
   procedure trans1 (
-    signal vec  : out std_logic_vector(3 downto 0);
-    signal wen  : in  std_logic;
-    signal addr : in  std_logic_vector(2 downto 0)) is
+    signal   vec  : out std_logic_vector(3 downto 0);
+    constant wen  : in  std_logic;
+    constant addr : in  std_logic_vector(2 downto 0) ) is
   begin
     vec <= addr & wen;
     wait for 1 us;
