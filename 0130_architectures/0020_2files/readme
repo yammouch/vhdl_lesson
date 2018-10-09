@@ -1,0 +1,7 @@
+ghdl -a sim_top.vhd
+ghdl -a arch2.vhd
+ghdl -e sim_top
+ghdl -r sim_top
+arch2.vhd:5:5:@0ms:(report note): sim2
+ghdl -r sim_top sim1
+sim_top.vhd:11:5:@0ms:(report note): sim1
