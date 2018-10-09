@@ -2,6 +2,8 @@
 -- $ ghdl -e sim_top
 -- $ ghdl -r sim_top
 -- > sim2
+-- $ ghdl -r sim_top sim1
+-- > sim1
 library ieee;
 use ieee.std_logic_1164.all;
 
