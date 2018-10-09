@@ -1,0 +1,10 @@
+$ ghdl -a sub1.vhd
+$ ghdl -a t0010.vhd
+$ ghdl -a t0020.vhd
+$ ghdl -a sim_top.vhd
+$ ghdl -e sim_top
+$ ghdl -r sim_top
+t0020.vhd:6:5:@1us:(report note): t0020
+$ ghdl -a t0010.vhd
+$ ghdl -r sim_top
+t0010.vhd:6:5:@1us:(report note): t0010
