@@ -7,9 +7,7 @@ end entity;
 
 architecture behav of ex01 is
 
-  --type nar is array (natural range <>) of natural;
-  --type nar is array (integer range <>) of integer;
-  type nar is array (natural range <>) of integer;
+  type nar is array (natural range <>) of natural;
 
   function lfsr (
    din : in std_ulogic_vector;
@@ -19,8 +17,10 @@ architecture behav of ex01 is
   begin
     retval := std_ulogic_vector(shift_right(unsigned(din), 1));
     if din(0) = '1' then
-      for i in nar'range loop
-        retval := retval xor shift_left(to_unsigned(1, din'length), nar(i) - 1);
+      for i in pow'range loop
+        retval := retval
+              xor std_ulogic_vector(shift_left( to_unsigned(1, din'length)
+                                              , pow(i) - 1 ) );
       end loop;
     end if;
     return retval;
