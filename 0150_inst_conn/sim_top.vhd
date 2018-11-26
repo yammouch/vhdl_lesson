@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity sim_top is
 end entity;
@@ -71,26 +72,28 @@ begin
       dio_1    => open );
 
   process
+    variable din_1 : std_ulogic_vector(3 downto 0);
   begin
     din_0 <= (others => '0');
     din_1_0 <= '0';
     din_1_1 <= '0';
     din_1_2 <= '0';
     din_1_3 <= '0';
-    wait for 1 us;
-    din_0 <= "0001";
-    for i in 0 to 3 loop
+    for i in 0 to 15 loop
       wait for 1 us;
-      din_0 <= din_0(2 downto 0) & '0';
+      din_0 <= std_ulogic_vector(unsigned(din_0) + 1);
     end loop;
-    wait for 1 us;
-    din_1_0 <= '1';
-    for i in 0 to 3 loop
+    for i in 0 to 15 loop
       wait for 1 us;
-      din_1_3 <= din_1_2;
-      din_1_2 <= din_1_1;
-      din_1_1 <= din_1_0;
-      din_1_0 <= '0';
+      din_1(3) := din_1_3;
+      din_1(2) := din_1_2;
+      din_1(1) := din_1_1;
+      din_1(0) := din_1_0;
+      din_1 := std_ulogic_vector(unsigned(din_1) + 1);
+      din_1_3 <= din_1(3);
+      din_1_2 <= din_1(2);
+      din_1_1 <= din_1(1);
+      din_1_0 <= din_1(0);
     end loop;
     wait;
   end process;

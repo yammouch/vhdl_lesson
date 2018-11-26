@@ -1,0 +1,31 @@
+[*]
+[*] GTKWave Analyzer v3.3.93 (w)1999-2018 BSI
+[*] Mon Nov 26 08:23:55 2018
+[*]
+[dumpfile] "C:\Users\nomus\Documents\deve\vhdl_lesson\0150_inst_conn\sim_top.vcd"
+[dumpfile_mtime] "Mon Nov 26 08:21:00 2018"
+[dumpfile_size] 1385
+[savefile] "C:\Users\nomus\Documents\deve\vhdl_lesson\0150_inst_conn\sim_top.gtkw"
+[timestart] 0
+[size] 1429 994
+[pos] -1 -1
+*-30.102417 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 211
+[signals_width] 125
+[sst_expanded] 1
+[sst_vpaned_height] 293
+@22
+din_0[3:0]
+dout_0[3:0]
+@28
+din_1_0
+din_1_1
+din_1_2
+din_1_3
+dout_1_0
+dout_1_1
+dout_1_2
+@29
+dout_1_3
+[pattern_trace] 1
+[pattern_trace] 0
